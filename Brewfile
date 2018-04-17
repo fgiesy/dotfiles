@@ -1,73 +1,64 @@
-# Requirements:
-# homebrew - http://brew.sh/
-# brew bundle - https://github.com/Homebrew/homebrew-bundle
-# cask - https://caskroom.github.io/ (installed automatically)
-# mas-cli - https://github.com/argon/mas
-
-# run the following first:
+# run the following first to install brew bundle
 #
 # brew tap homebrew/bundle
 #
-#
-# then run 
+# then run
 # 
 # brew bundle
-# OR
-# brew bundle 
 #
-# this will function as a npm install for brew and brew casks
+# that will do the following
+#
+#
+# getting all our brew basics set up
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/fonts"
+tap "caskroom/cask"
 
-# Sets Apps as where Cask apps get installed
-cask_args appdir: '/Applications'
-# Making sure we have Cask installed
-tap 'caskroom/cask'
-# Making sure we have Cask Versions installed
-tap 'caskroom/versions'
+# installing Mac App Store CLI interface
+brew "mas"
 
-# Installs our Mac App Store CLI alternative
-brew 'mas'
+# installing our casks
+cask "appcleaner"
+cask "avibrazil-rdm"
+cask "bartender"
+cask "beardedspice"
+cask "bitwarden"
+cask "caffeine"
+cask "cheatsheet"
+cask "contexts"
+cask "daisydisk"
+cask "dash"
+cask "dropbox"
+cask "droplr"
+cask "firefox"
+cask "flux"
+cask "google-chrome"
+cask "growlnotify"
+cask "iterm2"
+cask "keka"
+cask "koa11y"
+cask "lacona"
+cask "little-snitch"
+cask "moom"
+cask "sip"
+cask "streamlink-twitch-gui"
+cask "visual-studio-code"
+cask "vlc"
+cask "caskroom/fonts/font-molengo"
+cask "caskroom/fonts/font-open-sans"
+cask "caskroom/fonts/font-oswald"
+cask "caskroom/fonts/font-quattrocento"
+cask "caskroom/fonts/font-roboto"
+cask "caskroom/fonts/font-roboto-slab"
+cask "caskroom/fonts/font-source-sans-pro"
 
-# Installs our Casks
-cask 'appcleaner'
-cask 'avibrazil-rdm'
-cask 'bartender'
-cask 'beardedspice'
-cask 'bitwarden'
-cask 'caffeine'
-cask 'cheatsheet'
-cask 'contexts'
-cask 'dash'
-cask 'daisydisk'
-cask 'dropbox'
-cask 'droplr'
-cask 'firefox'
-cask 'flux'
-cask 'google-chrome'
-cask 'growlnotify'
-cask 'iterm2'
-cask 'keka'
-cask 'koa11y'
-cask 'lacona'
-cask 'little-snitch'
-cask 'moom'
-cask 'plex-media-player'
-cask 'sip'
-cask 'streamlink-twitch-gui'
-# cask 'unlox'
-cask 'visual-studio-code'
-cask 'vlc'
-
-
-# Install our Mac App Store apps
-mas 'GIFs', id: 961850017
-mas 'Parcel', id: 639968404
-mas 'Little Ipsum', id: 405772121
-mas 'Bear', id: 1091189122
-mas 'Keynote', id: 409183694
-mas 'Pocket', id: 568494494
-mas 'Numbers', id: 409203825
-mas 'Zen Timer', id: 1031035430
-
-brew cleanup
-brew cask cleanup
-mas 
+# using mas to install our Mac App Store items
+mas "Bear", id: 1091189122
+mas "GIFs", id: 961850017
+mas "Keynote", id: 409183694
+mas "LittleIpsum", id: 405772121
+mas "Numbers", id: 409203825
+mas "Parcel", id: 639968404
+mas "Pocket", id: 568494494
+mas "Zen Timer", id: 1031035430
