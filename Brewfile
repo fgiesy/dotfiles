@@ -18,6 +18,15 @@ tap "caskroom/cask"
 # installing Mac App Store CLI interface
 brew "mas"
 
+# installing a lovely -rm replacement, 'trash'
+brew "trash"
+
+# installing an updated VIM
+brew "neovim"
+
+# installing git
+brew "git"
+
 # installing our casks
 cask "appcleaner"
 cask "avibrazil-rdm"
